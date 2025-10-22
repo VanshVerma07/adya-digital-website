@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { MenuIcon, XIcon, AdyaLogoIcon } from './Icons';
+import { MenuIcon, XIcon } from './Icons';
 
 const NavLink: React.FC<{ href: string; children: React.ReactNode; onClick: () => void }> = ({ href, children, onClick }) => (
     <a
@@ -38,7 +38,11 @@ const Header: React.FC = () => {
             <div className="container mx-auto px-6 py-4">
                 <div className="flex items-center justify-between">
                     <a href="#home" className="flex items-center space-x-2 text-secondary font-bold text-2xl">
-                       <AdyaLogoIcon className="w-8 h-8" />
+                       <img src="/adya-logo.png"
+                            alt="Adya Digital Logo"
+                            className="w-8 h-8 object-contain"
+                       />
+
                         <span>Adya Digital</span>
                     </a>
                     <nav className="hidden md:flex items-center space-x-2">
